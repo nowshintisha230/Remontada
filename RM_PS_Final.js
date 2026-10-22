@@ -207,3 +207,14 @@ for(i=0;i< ar.length;i++){
 }
         return sum;
 };
+
+//18. Staircase
+//Create a right-aligned staircase of height n using # characters.
+
+var staircase = function(n) {
+ 	for(let i=1;i<=n;i++){
+        console.log(" ".repeat(n-i)+"#".repeat(i));
+    }
+ };
+
+ //
