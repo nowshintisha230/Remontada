@@ -53,7 +53,7 @@ var opposite = function (number){
 //Return the sum of all integers in an array//
 
 var simpleArraySum=function (ar){
-    var j=0;
+    let j=0;
 for(i=0;i< ar.length;i++){
     j=j+ar[i];
 }
@@ -197,3 +197,13 @@ var compareTriplets = function(a, b) {
     }
 return[mina,raju];
  };
+
+ //17. A Very Big Sum
+//Return the sum of all values in an integer array.
+var aVeryBigSum=function (ar){
+    let  sum=0;
+for(i=0;i< ar.length;i++){
+    sum=sum+ar[i];
+}
+        return sum;
+};
