@@ -107,14 +107,17 @@ var sumDouble=function(a,b){
 //10.diff21
 //return the absolute difference between n and 21,doubling it when n is greater than 21//
 
-var diff21=function(n){
-    if(n<21){
-        return n-21;
+var diff21 = function(n) {
+    if (n < 21) {
+        return 21 - n;
     }
-    else if(n>21){
-        return 2*(n-21);
+    else if (n > 21) {
+        return 2 * (n - 21);
     }
-}
+    else {
+        return 0;
+    }
+};
 
 //11.parrotTrouble
 //return true when a talking parrot is causing trouble outside the allowed hours of 7 through 20//
@@ -124,7 +127,9 @@ if(talking &&(hour<7 || hour >20))
 {
     return "true";
 }
+else{
 return "false";
+}
 }
 
 //12.makes10
@@ -134,7 +139,9 @@ var makes10 =function(a,b){
     if((a==10 || b==10) || (a+b ==10)){
         return true;
     }
+    else{
         return false;
+}
 }
 
 //13.nearHundred
@@ -144,7 +151,9 @@ var nearHundred= function(n){
     if((n>=90 && n<=110)|| (n>=190 && n<=210)){
         return true;
     }
+    else{
     return false;
+}
 }
 
 //14.posNeg
@@ -154,9 +163,10 @@ var posNeg = function(a, b, negative) {
     if (negative) {
         return a < 0 && b < 0;
     }
-
+else{
     return (a < 0 && b > 0) ||
            (a > 0 && b < 0);
+}
 };
 
 //15.notString
@@ -166,5 +176,24 @@ var notString=function(str){
     if(str.startWith("not")){
         return str;
     }
+    else{
     return "not" + str;
+    }
 }
+
+//16.Compare the Triplets
+//Compare two three-element score arrays and return how many points each person earns.//
+
+var compareTriplets = function(a, b) {
+ 	let mina=0;
+    let raju=0;
+    for(let i=0;i<3;i++){
+        if(a[i]>b[i]){
+            mina++;
+        }
+        elseif(a[i]<b[i]){
+            raju++;
+        }
+    }
+return[mina,raju];
+ };
